@@ -24,3 +24,8 @@ export const Column = styled.div`
 export const Cell = styled.div`
     margin: 10px 0;
 `;
+
+export const ActionsWrapper = styled.div`
+    margin: 10px 0;
+    text-align: center;
+`;

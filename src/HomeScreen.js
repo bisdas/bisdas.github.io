@@ -4,10 +4,20 @@ import Photo from './components/Photo';
 import Skills from './components/Skills';
 import Pitch from './components/Pitch';
 import Testimonies from './components/Testimonies';
-import { OuterWrapper, NavMenuWrapper, FaceWrapper, SkillsWrapper, PitchWrapper, TestimonyWrapper } from './HomeScreen.styled';
+import ScrollUpNavigation from './components/ScrollUpNavigation'
+import { OuterWrapper, NavMenuWrapper, FaceWrapper, SkillsWrapper, PitchWrapper, TestimonyWrapper, ScrollNavigationWrapper } from './HomeScreen.styled';
 import ProfileImage from './assets/images/profile-image.jpg'
 
 // todo: move literals to constants
+
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
 
 function HomeScreen() {
   return (
@@ -24,9 +34,15 @@ function HomeScreen() {
       <SkillsWrapper>
         <Skills />
       </SkillsWrapper>
+      <ScrollNavigationWrapper>
+        <ScrollUpNavigation showText={false} onClick={scrollToTop} />
+      </ScrollNavigationWrapper>
       <TestimonyWrapper>
         <Testimonies />
       </TestimonyWrapper>
+      <ScrollNavigationWrapper>
+        <ScrollUpNavigation showText={true} text="Go to Top" onClick={scrollToTop} />
+      </ScrollNavigationWrapper>
     </OuterWrapper>
   );
 }

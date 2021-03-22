@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Testimony from '../Testimony';
-import { OuterWrapper, Header, TestimoniesWrapper, Column, Cell } from './Testimonies.styled';
+import ActionLink from '../ActionLink';
+import { OuterWrapper, Header, TestimoniesWrapper, Column, Cell, ActionsWrapper } from './Testimonies.styled';
 
 export default function Testimonies() {
+    const [showLimited, setShowLimited] = useState(true);
+
+    // todo: move to constants
+    const initialShowLimit = 6;
+
     // todo: move array to constants
     const allTestimonies = [
         {
@@ -49,10 +55,11 @@ export default function Testimonies() {
         },
     ];
 
+    const availableTestimonies = showLimited ? allTestimonies.slice(0, initialShowLimit) : allTestimonies;
     const arrangedTestimonies = [];
 
     (() => {
-        const totalCount = allTestimonies.length;
+        const totalCount = availableTestimonies.length;
         const maxNumberOfColumns = 3; // todo: move to constants
         let calculatedNumberOfColumns = 1;
 
@@ -74,7 +81,7 @@ export default function Testimonies() {
 
         let insertIndex = 0;
 
-        allTestimonies.forEach((ttm, index) => {
+        availableTestimonies.forEach((ttm, index) => {
             if (arrangedTestimonies[insertIndex]) {
                 arrangedTestimonies[insertIndex].push(ttm);
             }
@@ -93,7 +100,7 @@ export default function Testimonies() {
     return (
         <OuterWrapper>
             <Header>
-                Testimonies
+                Testimonials
             </Header>
             <TestimoniesWrapper>
                 {
@@ -114,6 +121,12 @@ export default function Testimonies() {
                     ))
                 }
             </TestimoniesWrapper>
+            <ActionsWrapper>
+                <ActionLink
+                    text={showLimited ? 'Show all' : 'Show less'}
+                    onClick={() => { setShowLimited(!showLimited) }}
+                />
+            </ActionsWrapper>
         </OuterWrapper>
     );
 }

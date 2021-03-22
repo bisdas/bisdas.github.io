@@ -5,6 +5,7 @@ export const OuterWrapper = styled.div`
     max-width: 800px;
     padding: 0 20px;
     margin: 0 auto;
+    padding-bottom: 40px;
 `
 export const NavMenuWrapper = styled.div`
     margin: 14px 0;
@@ -22,4 +23,8 @@ export const PitchWrapper = styled.div`
 `
 export const TestimonyWrapper = styled.div`
     margin-top: 40px;   
+`
+export const ScrollNavigationWrapper = styled.div`
+    margin-top: 40px;  
+    text-align: center; 
 `

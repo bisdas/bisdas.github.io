@@ -8,6 +8,7 @@ export const OuterWrapper = styled.div`
 `
 export const Message = styled.div`
     font-family: handlee-regular, Trebuchet MS, Verdana, sans-serif;
+    letter-spacing: 1px;
     font-size:16px;
 `
 export const Author = styled.div`
