@@ -10,17 +10,29 @@ import { ReactComponent as IconRecommend } from '../../assets/icons/IconRecommen
 import { ReactComponent as IconResume } from '../../assets/icons/IconResume.svg';
 
 export default function NavMenu() {
+
+    // todo: move to constants
+    const LinkedIn_Url = "https://linkedin.com/in/bishnud/";
+    const Github_Url = "https://github.com/bisdas";
+
+    // todo: move to utils
+    const openTab = (pageUrl) => {
+        window.open(pageUrl, "_blank")
+    }
+
+
+
     // todo: move literals to constant
     const menuItems = [
         {
             text: 'LinkedIn',
             icon: <IconLinkedIn height={14} width={14} />,
-            onClick: () => null
+            onClick: () => openTab(LinkedIn_Url)
         },
         {
             text: 'Github',
             icon: <IconGithub height={14} width={14} />,
-            onClick: () => null
+            onClick: () => openTab(Github_Url)
         },
         {
             text: 'Resume',

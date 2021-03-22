@@ -11,13 +11,13 @@ import ProfileImage from './assets/images/profile-image.jpg'
 // todo: move literals to constants
 
 
+// todo: move to utils
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 }
-
 
 function HomeScreen() {
   return (
