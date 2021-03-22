@@ -14,27 +14,27 @@ export default function NavMenu() {
     const menuItems = [
         {
             text: 'LinkedIn',
-            icon: <IconLinkedIn height={16} width={16} />,
+            icon: <IconLinkedIn height={14} width={14} />,
             onClick: () => null
         },
         {
             text: 'Github',
-            icon: <IconGithub height={16} width={16} />,
+            icon: <IconGithub height={14} width={14} />,
             onClick: () => null
         },
         {
             text: 'Resume',
-            icon: <IconResume height={16} width={16} />,
+            icon: <IconResume height={14} width={14} />,
             onClick: () => null
         },
         {
             text: 'Testimony',
-            icon: <IconRecommend height={16} width={16} />,
+            icon: <IconRecommend height={14} width={14} />,
             onClick: () => null
         },
         {
             text: 'Contact',
-            icon: <IconEmail height={16} width={16} />,
+            icon: <IconEmail height={14} width={14} />,
             onClick: () => null
         }
     ];
