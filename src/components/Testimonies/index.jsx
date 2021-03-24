@@ -104,11 +104,11 @@ export default function Testimonies() {
             </Header>
             <TestimoniesWrapper>
                 {
-                    arrangedTestimonies.map((ttmInColumn) => (
-                        <Column>
+                    arrangedTestimonies.map((ttmInColumn, index) => (
+                        <Column key={index}>
                             {
-                                ttmInColumn.map((ttm) => (
-                                    <Cell>
+                                ttmInColumn.map((ttm, index) => (
+                                    <Cell key={index}>
                                         <Testimony
                                             message={ttm.message}
                                             author={ttm.author}

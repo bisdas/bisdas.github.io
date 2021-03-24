@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as IconBack } from '../../assets/icons/IconBack.svg';
 import { OuterWrapper, IconWrapper, TextWrapper } from './BackNavigation.styled';
 
-export default function ({ text, onClick }) {
+export default function BackNavigation({ text, onClick }) {
     return (
         <OuterWrapper onClick={onClick}>
             <IconWrapper>

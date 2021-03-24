@@ -4,7 +4,12 @@ export const OuterWrapper = styled.div`
     cursor: pointer;
     display: inline-block;
     display: flex;
-    padding: 2px 4px;
+    padding: 2px 10px 2px 6px;
+    border-radius: 3px;
+        
+    :hover { 
+        background-color: #ededed;
+    }
 `
 export const IconWrapper = styled.div`
     

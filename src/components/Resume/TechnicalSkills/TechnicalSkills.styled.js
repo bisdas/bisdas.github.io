@@ -10,7 +10,7 @@ export const Column = styled.div`
 
 export const SkillName = styled.div`
     font-size: 13px;
-    font-family: Consolas, Trebuchet MS, Verdana, sans-serif;
+    font-family: Consolas, Menlo, Trebuchet MS, Verdana, sans-serif;
     color: #000000;
     letter-spacing: 1px;
     margin: 4px 0;

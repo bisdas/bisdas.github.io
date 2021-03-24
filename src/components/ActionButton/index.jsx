@@ -1,7 +1,7 @@
 import React from 'react';
 import { OuterWrapper } from './ActionButton.styled';
 
-export default function({ text, onClick }) {
+export default function ActionButton({ text, onClick }) {
     return (
         <OuterWrapper onClick={onClick}>
             {text}

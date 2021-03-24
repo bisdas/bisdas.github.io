@@ -50,8 +50,8 @@ export default function NavMenu({ setActivePage }) {
 
     return (
         <OuterWrapper>
-            {menuItems.map((item) => (
-                <MenuItemWrapper>
+            {menuItems.map((item, index) => (
+                <MenuItemWrapper key={index}>
                     <MenuItem
                         text={item.text}
                         icon={item.icon}

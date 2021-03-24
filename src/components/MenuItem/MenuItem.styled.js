@@ -10,8 +10,13 @@ export const IconWrapper = styled.div`
 `
 export const TextWrapper = styled.div`
     position: relative;
-    top: 2px;
+    top: 3px;
     font-size: 12px;
-    font-family: Menlo, lekton-regular, Consolas, monospace;
+    font-family: nexa-bold, Menlo, Consolas, Verdana, sans-serif;
     letter-spacing: 1px;
+    color: #4d4d4d;
+
+    :hover { 
+        color: #000000
+    }
 `

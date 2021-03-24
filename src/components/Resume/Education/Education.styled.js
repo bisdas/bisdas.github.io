@@ -22,7 +22,7 @@ export const SingleLine = styled.div`
 
 export const Course = styled.div`
     font-size: 13px;
-    font-family: Consolas, Trebuchet MS, Verdana, sans-serif;
+    font-family: Consolas, Menlo, Trebuchet MS, Verdana, sans-serif;
     color: #000000;
     font-weight: bold;
     letter-spacing: 1px;
@@ -30,21 +30,21 @@ export const Course = styled.div`
 
 export const Subject = styled.div`
     font-size: 13px;
-    font-family: Consolas, Trebuchet MS, Verdana, sans-serif;
+    font-family: Consolas, Menlo, Trebuchet MS, Verdana, sans-serif;
     color: #000000;
     letter-spacing: 1px;
 `
 
 export const School = styled.div`
     font-size: 13px;
-    font-family: Consolas, Trebuchet MS, Verdana, sans-serif;
+    font-family: Consolas, Menlo, Trebuchet MS, Verdana, sans-serif;
     color: #000000;
     letter-spacing: 1px;
 `
 
 export const YearOfPassing = styled.div`
     font-size: 13px;
-    font-family: Consolas, Trebuchet MS, Verdana, sans-serif;
+    font-family: Consolas, Menlo, Trebuchet MS, Verdana, sans-serif;
     color: #000000;
     letter-spacing: 1px;
 `

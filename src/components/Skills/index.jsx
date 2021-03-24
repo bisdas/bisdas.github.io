@@ -20,12 +20,12 @@ export default function Skills() {
             </Header>
             <SkillsTriangle>
                 {
-                    skillsArrayLines.map((line) => {
+                    skillsArrayLines.map((line, index) => {
                         return (
-                            <Line>
+                            <Line key={index}>
                                 {
-                                    line.map((skill) => (
-                                        <BrickSpacer>
+                                    line.map((skill, index) => (
+                                        <BrickSpacer key={index}>
                                             <Brick text={skill} />
                                         </BrickSpacer>
                                     ))

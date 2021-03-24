@@ -5,11 +5,13 @@ export const OuterWrapper = styled.div`
 `
 export const NavigationLayout = styled.div`
     display: flex;
-    padding: 10px 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ededed;
+    justify-content: flex-end;
 `
 export const ResumeLayout = styled.div`
     margin-top: 10px;
-    padding-top: 30px;
+    padding-top: 10px;
 `
 export const EducationWrapper = styled.div`
     margin-bottom: 16px;
