@@ -6,5 +6,5 @@ export const OuterWrapper = styled.div`
 `
 export const TextWrapper = styled.div`
     font-family: Trebuchet MS, Verdana, sans-serif; 
-    font-size: 15px;
+    font-size: 14px;
 `

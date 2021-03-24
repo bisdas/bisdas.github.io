@@ -1,16 +1,14 @@
 import React from 'react';
 import { OuterWrapper, MenuItemWrapper } from './NavMenu.styled';
-
 import MenuItem from '../MenuItem'
-
+import { Pages } from '../../constants';
 import { ReactComponent as IconLinkedIn } from '../../assets/icons/IconLinkedIn.svg';
 import { ReactComponent as IconEmail } from '../../assets/icons/IconEmail.svg';
 import { ReactComponent as IconGithub } from '../../assets/icons/IconGithub.svg';
 import { ReactComponent as IconRecommend } from '../../assets/icons/IconRecommend.svg';
 import { ReactComponent as IconResume } from '../../assets/icons/IconResume.svg';
 
-export default function NavMenu() {
-
+export default function NavMenu({ setActivePage }) {
     // todo: move to constants
     const LinkedIn_Url = "https://linkedin.com/in/bishnud/";
     const Github_Url = "https://github.com/bisdas";
@@ -19,7 +17,6 @@ export default function NavMenu() {
     const openTab = (pageUrl) => {
         window.open(pageUrl, "_blank")
     }
-
 
 
     // todo: move literals to constant
@@ -37,7 +34,7 @@ export default function NavMenu() {
         {
             text: 'Resume',
             icon: <IconResume height={14} width={14} />,
-            onClick: () => null
+            onClick: () => setActivePage(Pages.RESUME)
         },
         {
             text: 'Testimony',

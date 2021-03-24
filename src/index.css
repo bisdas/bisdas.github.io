@@ -13,6 +13,46 @@
   src: local('handlee-regular'), url(./assets/fonts/handlee/handlee-regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'nexa-bold';
+  src: local('nexa-bold'), url(./assets/fonts/nexa/Nexa-Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'nexa-light';
+  src: local('nexa-light'), url(./assets/fonts/nexa/Nexa-Light.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'comodo-regular';
+  src: local('comodo-regular'), url(./assets/fonts/comodo/Comodo\ Regular\ Free.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'comodo-vintage';
+  src: local('comodo-vintage'), url(./assets/fonts/comodo/Comodo\ Vintage\ Free.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'arvo-bold';
+  src: local('arvo-bold'), url(./assets/fonts/arvo//Arvo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'arvo-bold-italic';
+  src: local('arvo-bold-italic'), url(./assets/fonts/arvo//Arvo-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'arvo-italic';
+  src: local('arvo-italic'), url(./assets/fonts/arvo//Arvo-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'arvo-regular';
+  src: local('arvo-regular'), url(./assets/fonts/arvo//Arvo-Regular.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
