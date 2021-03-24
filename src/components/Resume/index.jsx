@@ -5,10 +5,14 @@ import TechnicalSkills from './TechnicalSkills';
 import Pitch from '../Pitch';
 import Bullets from './Bullets';
 import WorkExperiences from './WorkExperiences';
+import ScrollUpNavigation from '../ScrollUpNavigation';
+import BackNavigation from '../BackNavigation';
+import ActionButton from '../ActionButton';
 
 import {
     OuterWrapper,
     ResumeLayout,
+    NavigationLayout,
     EducationWrapper,
     NameWrapper,
     RoleWrapper,
@@ -17,10 +21,15 @@ import {
     PitchWrapper,
     HorizontalLayout,
     VerticalLayout,
-    LayoutSection
+    LayoutSection,
+    ScrollNavigationWrapper,
+    BackNavigationWrapper,
+    DownloadActionWrapper
 } from './Resume.styled';
 
-export default function Resume() {
+import { scrollToTop } from '../../utils';
+
+export default function Resume({ onBackNavigation, onDownloadResume }) {
 
     // todo: move to constants
     const listOfEducation = [
@@ -71,7 +80,7 @@ export default function Resume() {
     // todo: move to constants
     const workExperience = [
         {
-            organisation: 'INTUIT (Payroll: Altimetrik India Private Limited)',
+            organisation: '(Payroll: Altimetrik India Private Limited)',
             designation: 'Senior Engineer',
             start: 'JAN 2020',
             end: '',
@@ -106,6 +115,14 @@ export default function Resume() {
 
     return (
         <OuterWrapper>
+            <NavigationLayout>
+                <BackNavigationWrapper>
+                    <BackNavigation text="Back" onClick={onBackNavigation} />
+                </BackNavigationWrapper>
+                <DownloadActionWrapper>
+                    <ActionButton text="Download Resume" onClick={onDownloadResume} />
+                </DownloadActionWrapper>
+            </NavigationLayout>
             <ResumeLayout>
                 <VerticalLayout>
                     <HorizontalLayout>
@@ -148,6 +165,9 @@ export default function Resume() {
                     </ResumeSection>
                 </VerticalLayout>
             </ResumeLayout>
+            <ScrollNavigationWrapper>
+                <ScrollUpNavigation showText={true} text="Go to Top" onClick={scrollToTop} />
+            </ScrollNavigationWrapper>
         </OuterWrapper>
     );
 }

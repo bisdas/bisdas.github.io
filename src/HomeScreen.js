@@ -8,20 +8,15 @@ import ScrollUpNavigation from './components/ScrollUpNavigation'
 import Resume from './components/Resume';
 import { OuterWrapper, NavMenuWrapper, FaceWrapper, SkillsWrapper, PitchWrapper, TestimonyWrapper, ScrollNavigationWrapper } from './HomeScreen.styled';
 import ProfileImage from './assets/images/profile-image.jpg'
+
 import { Pages } from './constants';
+import { scrollToTop } from './utils';
 
 
 // todo: move literals to constants
-// todo: move to utils
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
 
 function HomeScreen() {
-  const [activePage, setActivePage] = useState(Pages.RESUME);
+  const [activePage, setActivePage] = useState(Pages.HOME);
 
   return (
     <OuterWrapper>
@@ -54,7 +49,10 @@ function HomeScreen() {
       }
       {
         activePage === Pages.RESUME && (
-          <Resume />
+          <Resume
+            onBackNavigation={() => setActivePage(Pages.HOME)}
+            onDownloadResume={null}
+          />
         )
       }
     </OuterWrapper>

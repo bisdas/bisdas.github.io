@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const OuterWrapper = styled.div`
     
 `
+export const NavigationLayout = styled.div`
+    display: flex;
+    padding: 10px 0;
+`
 export const ResumeLayout = styled.div`
     margin-top: 10px;
     padding-top: 30px;
@@ -44,4 +48,15 @@ export const Role = styled.div`
     color: #1376e0;
     letter-spacing: 1px;
     text-transform: Capitalize;
+`
+export const ScrollNavigationWrapper = styled.div`
+    margin-top: 40px;  
+    text-align: center; 
+`
+export const BackNavigationWrapper = styled.div`
+   
+`
+export const DownloadActionWrapper = styled.div`
+    margin-left: 20px;
+    margin-top: 1px;
 `
