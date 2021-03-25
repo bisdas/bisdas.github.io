@@ -8,7 +8,7 @@ import { ReactComponent as IconGithub } from '../../assets/icons/IconGithub.svg'
 import { ReactComponent as IconRecommend } from '../../assets/icons/IconRecommend.svg';
 import { ReactComponent as IconResume } from '../../assets/icons/IconResume.svg';
 
-export default function NavMenu({ setActivePage }) {
+export default function NavMenu({ onSetActivePage, onShowContact }) {
     // todo: move to constants
     const LinkedIn_Url = "https://linkedin.com/in/bishnud/";
     const Github_Url = "https://github.com/bisdas";
@@ -34,7 +34,7 @@ export default function NavMenu({ setActivePage }) {
         {
             text: 'Resume',
             icon: <IconResume height={14} width={14} />,
-            onClick: () => setActivePage(Pages.RESUME)
+            onClick: () => onSetActivePage(Pages.RESUME)
         },
         {
             text: 'Testimony',
@@ -44,7 +44,7 @@ export default function NavMenu({ setActivePage }) {
         {
             text: 'Contact',
             icon: <IconEmail height={14} width={14} />,
-            onClick: () => null
+            onClick: () => onShowContact()
         }
     ];
 

@@ -6,6 +6,8 @@ import Pitch from './components/Pitch';
 import Testimonies from './components/Testimonies';
 import ScrollUpNavigation from './components/ScrollUpNavigation'
 import Resume from './components/Resume';
+import Modal from './components/Modal';
+import Contact from './components/Contact';
 import { OuterWrapper, NavMenuWrapper, FaceWrapper, SkillsWrapper, PitchWrapper, TestimonyWrapper, ScrollNavigationWrapper } from './HomeScreen.styled';
 import ProfileImage from './assets/images/profile-image.jpg'
 
@@ -17,6 +19,7 @@ import { scrollToTop } from './utils';
 
 function HomeScreen() {
   const [activePage, setActivePage] = useState(Pages.HOME);
+  const [showContactForm, setShowContactForm] = useState(false);
 
   return (
     <OuterWrapper>
@@ -24,7 +27,10 @@ function HomeScreen() {
         activePage === Pages.HOME && (
           <>
             <NavMenuWrapper>
-              <NavMenu setActivePage={setActivePage} />
+              <NavMenu
+                onSetActivePage={setActivePage}
+                onShowContact={() => setShowContactForm(true)}
+              />
             </NavMenuWrapper>
             <FaceWrapper>
               <Photo image={ProfileImage} alt="photo" height={240} />
@@ -55,6 +61,15 @@ function HomeScreen() {
           />
         )
       }
+
+      {showContactForm && (
+        <Modal onClose={() => setShowContactForm(false)} >
+          <Contact
+            onClose={() => setShowContactForm(false)}
+            onSendMessage={() => null}
+          />
+        </Modal>
+      )}
     </OuterWrapper>
   );
 }
