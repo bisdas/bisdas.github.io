@@ -17,6 +17,6 @@ export const TextWrapper = styled.div`
     color: #4d4d4d;
 
     :hover { 
-        color: #000000
+        color: #000000;
     }
 `

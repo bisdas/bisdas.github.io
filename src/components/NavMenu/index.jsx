@@ -36,11 +36,11 @@ export default function NavMenu({ onSetActivePage, onShowContact }) {
             icon: <IconResume height={14} width={14} />,
             onClick: () => onSetActivePage(Pages.RESUME)
         },
-        {
-            text: 'Testimony',
-            icon: <IconRecommend height={14} width={14} />,
-            onClick: () => null
-        },
+        // {
+        //     text: 'Testimony',
+        //     icon: <IconRecommend height={14} width={14} />,
+        //     onClick: () => null
+        // },
         {
             text: 'Contact',
             icon: <IconEmail height={14} width={14} />,

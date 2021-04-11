@@ -26,7 +26,10 @@ export default function Contact({ onSendMessage, onClose }) {
             </FormInfo>
             <MessageWrapper>
                 <textarea
-                    maxlength={400}
+                    onChange={(e) => {
+                        setMessage(e.target.value);
+                    }}
+                    maxLength={400}
                     style={{
                         height: '140px',
                         width: '100%',

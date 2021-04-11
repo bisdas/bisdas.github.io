@@ -12,7 +12,7 @@ import { OuterWrapper, NavMenuWrapper, FaceWrapper, SkillsWrapper, PitchWrapper,
 import ProfileImage from './assets/images/profile-image.jpg'
 
 import { Pages } from './constants';
-import { scrollToTop } from './utils';
+import { scrollToTop, sendMessage } from './utils';
 
 
 // todo: move literals to constants
@@ -66,7 +66,7 @@ function HomeScreen() {
         <Modal onClose={() => setShowContactForm(false)} >
           <Contact
             onClose={() => setShowContactForm(false)}
-            onSendMessage={() => null}
+            onSendMessage={(message) => sendMessage(message)}
           />
         </Modal>
       )}
